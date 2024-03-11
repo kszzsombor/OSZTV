@@ -1,0 +1,42 @@
+<html>
+<head> 
+    <style>
+        body{
+            background-color: yellow;
+        }
+        h1{
+            text-align: center;
+            color: blue;
+        }
+        #gomb{
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+    
+<h1>OSZTV 2023</h1>
+<h3>Teszt környezet Javascript</h3>
+<p>Az alábbi űrlap segítségével adja meg a kódját!</p>
+<form action="">
+    <label for="">Az ön kódja: </label>
+    <input type="text" name="" id="kod">
+    <br>
+    <input type="button" value="Kattintson a gombra!" id="gomb" onclick="kiir()">
+    <input type="button" value="Pollak" id="gomb1" onclick="hiv()">
+</form>
+
+<script>
+    function kiir(){
+        let kod = document.getElementById("kod").value;
+        let datum = new Date();
+        let datum1 = datum.toLocaleString();
+        let szoveg= "Versenyzői kód: " + kod + "\n" + "A pontos idő: "+ datum1;
+        alert(szoveg);
+    }
+    function hiv(){
+        location.href = "https://pollak.hu";
+    }
+</script>
+</body>
+</html>
